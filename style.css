@@ -2,7 +2,7 @@
   display: block;
   margin: 30px 0;
 }
-a {
-  font-size: 50px;
+.block a {
+  font-size: 30px;
   color: rgb(99, 99, 99);
 }
