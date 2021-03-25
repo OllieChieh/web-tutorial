@@ -1,0 +1,42 @@
+div{
+    border: 1px solid black;
+}
+.div-bg{
+    margin: 30px;
+    background-color: rgb(141, 141, 86);
+}
+#div-4{
+    /* padding: 30px; */
+}
+
+.absolute{
+    background-color: rgb(168, 213, 214);
+    color:  #000;
+    position: absolute;
+    bottom:0;
+    right:0;
+    width: 100px;
+    height:50px;
+    text-align: center;
+}
+.relative{
+    background-color: cadetblue;
+    color:  #fff;
+    position: relative;
+}
+.btn{
+    margin: 50px;
+    padding: 15px 50px;
+    /* padding: 10px 20px 5px 0; */
+    font-size: 30px;
+    color: white;
+    background-color: cornflowerblue;
+    border: 5px solid rgb(70, 96, 179);
+    border-radius: 10px 50px 10px 0;
+}
+.btn:hover{
+    background-color: rgb(231, 184, 83);
+    color: #000;
+    border: 10px outset rgb(139, 94, 54);
+    cursor: pointer;
+}
