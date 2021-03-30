@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body {
+            background-color: gainsboro;
+        }
+        
+        .div-all {
+            width: 385px;
+            height: 100px;
+            background: white;
+            margin-top: 10px;
+            margin-left: 10px;
+            display: inline-block;
+            border-bottom: 1px solid grey;
+            border-right: 1px solid grey;
+            padding: 10px;
+        }
+        
+        .div-img {
+            width: 135px;
+            height: 100%;
+            background-color: gainsboro;
+            float: left;
+        }
+        
+        .div-img img {
+            width: 100%;
+        }
+        
+        .div-cont {
+            width: 240px;
+            height: 100%;
+            float: left;
+            margin-left: 10px;
+            overflow: hidden;
+        }
+        
+        .div-cont h4 {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+    </style>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        var img = new Array("pic_01.jpg", "pic_02.jpg", "pic_03.jpg");
+        var title = new Array("一中商圈", "逢甲夜市", "旱溪夜市");
+        var info = new Array("位在台中第一中學附近的商圈，滿滿的美食也吸引外地遊客慕名而來。", "逢甲夜市鄰近逢甲大學，蘊含著許多人潮排隊美食。", "比起逢甲夜市與一中商圈聲勢也是越來越浩大。");
+        $(document).ready(function() {
+            //宣告html字串用來存放要附加的網頁內容
+            var html = "";
+            //將#divShow的內容清除
+            $("#divShow").empty();
+            //使用for迴圈將img, title, info的夜市資料
+            //如夜市的圖片、名稱、資訊放入#divShow內
+            for (var i = 0; i < img.length; i++) {
+                html =
+                    "<div class='div-all'>" +
+                    "<a href='#'>" +
+                    "<div class='div-img'><img src='Market/" + img[i] + "'></div >" +
+                    "<div class='div-cont'>" +
+                    "<h4>" + title[i] + "</h4>" +
+                    "<p>" + info[i] + "</p>" +
+                    "</div>" +
+                    "</a >" +
+                    "</div>"
+                $("#divShow").append(html);
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div id="divShow"></div>
+</body>
+
+</html>

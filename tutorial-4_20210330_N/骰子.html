@@ -1,0 +1,94 @@
+<HTML>
+<div class="container">
+    <header>
+        <h1>擲骰子．比大小</h1>
+        <h3>快來和老虎一決勝負吧！</h3>
+        <link rel="stylesheet" href="css/骰子.css">
+    </header>
+    <script language="javascript">
+        function tigerBear(){
+            // 設計變數
+            let tigerWinCount = 0
+            let bearWinCount = 0
+            var process = document.querySelector(".log");
+            var abstract = document.querySelector(".abstract");
+            var winner = document.querySelector("#winnner");
+            process.innerHTML = "";
+            abstract.innerHTML = "";
+            winner.innerHTML = "";
+
+            // 跑 10 局
+            // write your code 
+            for (let count = 1; count <= 10; count++) {
+                // 輸流擲骰子  
+                let tiger = Math.floor(Math.random() * 6) + 1
+                let bear = Math.floor(Math.random() * 6) + 1
+
+                // 計算當局輸贏，並輸出結果 
+                if (tiger === bear) {
+                    // console.log(`第 ${count} 局: 虎哥 ${tiger} 點 vs. 熊弟 ${bear} 點, 本局平局`);
+                    process.innerHTML += `第 ${count} 局: 虎哥 ${tiger} 點 vs. 熊弟 ${bear} 點, 本局平局<br>`;
+                } else if (tiger > bear) {
+                    // console.log(`第 ${count} 局: 虎哥 ${tiger} 點 vs. 熊弟 ${bear} 點, 虎哥獲勝`);
+                    tigerWinCount++;
+                    process.innerHTML += `第 ${count} 局: 虎哥 ${tiger} 點 vs. 熊弟 ${bear} 點, 虎哥獲勝<br>`;
+                } else {
+                    // console.log(`第 ${count} 局: 虎哥 ${tiger} 點 vs. 熊弟 ${bear} 點, 熊弟獲勝`);
+                    bearWinCount++;
+                    process.innerHTML += `第 ${count} 局: 虎哥 ${tiger} 點 vs. 熊弟 ${bear} 點, 熊弟獲勝<br>`;
+                }
+            }
+
+            // 輸出摘要
+           
+            // console.log('--- 結果 ---');
+            // console.log(`虎哥贏 ${tigerWinCount} 局`);
+            // console.log(`熊弟贏 ${bearWinCount} 局`);
+            abstract.innerHTML += '--- 結果 ---<br>';
+            abstract.innerHTML += `虎哥贏 ${tigerWinCount} 局<br>`;
+            abstract.innerHTML += `熊弟贏 ${bearWinCount} 局<br>`;
+            abstract.innerHTML += '================================<br>';
+
+           
+            // 宣布最終勝利者
+            if (tigerWinCount === bearWinCount) {
+                // console.log('最終冠軍: 雙方戰成平手');
+                winner.innerHTML = '最終冠軍: 雙方戰成平手';
+            } else if (tigerWinCount > bearWinCount) {
+                // console.log('最終冠軍: 虎哥');
+                winner.innerHTML = '最終冠軍: 虎哥';
+            } else {
+                // console.log('最終冠軍: 熊弟');
+                winner.innerHTML = '最終冠軍: 熊弟';
+            }
+        }
+
+    </script>
+
+    <body>
+        <main>
+            <button id = "play-btn" onclick="tigerBear();"> START </button> 
+
+            <div>
+                <div class = "avatar bear-avatar">
+                    <div class="overlay">?</div>
+                </div>
+            </div>
+
+            <div>
+                <div class="avatar tiger-avatar">
+                    <div class="overlay">?</div>
+                </div>
+            </div>
+
+            
+
+        </main>
+        <div class="console">
+            <div class="log"></div>
+            <div class="abstract"></div>
+            <div id="winnner"></div>
+        </div>
+        
+    </body>
+        

@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .cont-opacity {
+            opacity: 0.5;
+        }
+    </style>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        function fnAddClass() {
+            $("#img_dog").addClass("cont-opacity");
+        }
+
+        function fnRemoveClass() {
+            $("#img_dog").removeClass("cont-opacity");
+        }
+
+        function fnToggleClass() {
+            $("#img_dog").toggleClass("cont-opacity");
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" value="新增類別" onclick="fnAddClass();" />
+    <input type="button" value="刪除類別" onclick="fnRemoveClass();" />
+    <input type="button" value="切換類別" onclick="fnToggleClass();" />
+    <p><img src="images/dog.png" id="img_dog" /></p>
+</body>
+
+</html>

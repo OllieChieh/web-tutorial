@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        // 宣告index用來代表目前是第幾筆記錄，0表示第一筆
+        var index = 0;
+        // 宣告img, title, info用來放置三筆夜市圖片、夜市名稱、夜市說明
+        var img = new Array("Fengjia.jpg", "Yizhong.jpg", "Tunghai.jpg");
+        var title = new Array("逢甲夜市", "一中夜市", "東海夜市");
+        var info = new Array("位在逢甲大學前的觀光夜市，假日時節常常吸引大批人潮。", "位於台中一中與台中科技大學之間的街道。", "位在東海大學旁的夜市，由於鄰近台灣大道使得人潮從不間斷。");
+        //建立toHTML()函式用來傳回HTML的夜市內容
+        function toHTML(index) {
+            var hm = "<img src='images/" + img[index] + "' width='125' style='float:left;margin:10px;'>";
+            hm += "<h3>" + title[index] + "</h3>";
+            hm += "<p>" + info[index] + "</p>";
+            return hm;
+        }
+        //網頁元素載入就緒執行此事件
+        $(document).ready(function() {
+                //將toHTML()函式取得的夜市資料呈現在#div_cont元素上
+                $("#div_cont").html(toHTML(index));
+            })
+            //按下一篇鈕執行
+        function fnNext() {
+            //移往下一筆
+            index++;
+            //判斷是否超出最後一筆
+            if (index >= img.length) {
+                //指定從第一筆開始
+                index = 0;
+            }
+            //將toHTML()函式取得的夜市資料呈現在#div_cont元素上
+            $("#div_cont").html(toHTML(index));
+        }
+    </script>
+</head>
+
+<body>
+    <div id="div_cont" style="border-style:solid">
+    </div>
+    <p><input type="button" onclick="fnNext();" value="下一篇"></p>
+</body>
+
+</html>
