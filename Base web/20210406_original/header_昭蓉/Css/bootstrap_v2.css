@@ -1,0 +1,23 @@
+navbar-default {
+    background-color:#BEC23F;
+    border-color:#BEC23F;
+}
+
+body{
+    font-family: 'RocknRoll One', sans-serif;
+}
+
+
+
+.custom-nav{
+    background-color: #42602d !important;
+    
+}
+.footer{
+  width: 100%;
+  background-color: #42602d;
+  color: white;
+  text-align:center;
+  line-height:100px;
+  font-size:22px;
+}

@@ -1,0 +1,10 @@
+body{
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.custom-nav{
+    background-color: #42602d !important;
+}
+.footer{
+    background-color: #42602d !important;
+    color: white;
+}

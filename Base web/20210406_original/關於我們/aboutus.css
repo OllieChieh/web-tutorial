@@ -1,0 +1,107 @@
+
+/* <body style="color:blue;"> */
+
+
+
+body{
+    font-family: 'RocknRoll One', sans-serif;
+    color:#fff;
+    
+    /* // 透明度 0.6 的黑色半透明遮罩 */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* // 設置背景混和模式為相乘模式 */
+    background-blend-mode: multiply;
+    
+    /* background-color: #42602d ; */
+    background-image:url('./S__26517519.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    text-align:center;
+    
+    
+    
+    /* background-color: #42602d !important; */
+}
+
+
+
+.container{
+    width: 2000px;
+    margin: 0 auto;
+    
+  }
+
+.card{
+    position: relative;
+    width: 700px;
+    float:none;
+    margin:auto ;
+    
+}
+
+img{
+/* 思考一下 */
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+.info{
+/*   display: none; */
+    font-family: '微軟正黑體';
+    opacity: 0;
+    position: absolute;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,.6);
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding:110px 30px;
+}
+.info p{
+    color: #fff;
+}
+.info:hover{
+    -webkit-transition: 500ms;
+    opacity: 1;
+}
+
+.text{
+    font-weight: 700;
+}
+
+.text2{
+    font-family: '微軟正黑體';
+    font-weight: 500;
+}
+
+.text3{
+    font-family: '微軟正黑體';
+    font-weight: 500;
+    padding:30px 250px;
+    text-align:justify;
+    text-indent:2em;
+	margin:0;
+}
+.text3:first-letter{
+    font-size:36px;
+    float:inline-start;
+}
+
+
+ 
+p{
+    line-height:180%;
+}
+
+
+
+.text4{
+    font-family: '微軟正黑體';
+    font-weight: 500;
+    padding:0px 250px;
+}
+

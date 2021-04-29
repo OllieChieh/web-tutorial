@@ -1,0 +1,13 @@
+body{
+    font-family: 'RocknRoll One', sans-serif;
+}
+.custom-nav{
+    background-color: #42602d !important;
+}
+h1 { 
+    font-size: 4em; margin: .67em 0 ;
+    color: #42602d !important
+}
+h2 { 
+    font-size: 2em; margin: .75em 0 
+}

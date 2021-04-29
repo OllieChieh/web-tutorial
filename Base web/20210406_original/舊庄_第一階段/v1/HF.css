@@ -1,0 +1,22 @@
+body{
+    font-family: 'RocknRoll One', sans-serif;
+}
+.custom-nav{
+    background-color: #42602d !important;
+}
+
+$custom-gutter-width: 20px;
+.custom-gutters {
+    &.container {
+        padding-left: $custom-gutter-width / 2;
+        padding-right: $custom-gutter-width / 2;
+    }
+    .row {
+        margin-left: -($custom-gutter-width / 2);
+        margin-right: -($custom-gutter-width / 2);
+    }
+    .col {
+        padding-left: $custom-gutter-width / 2;
+        padding-right: $custom-gutter-width / 2;
+    }
+}
